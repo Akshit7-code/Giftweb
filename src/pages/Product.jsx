@@ -96,21 +96,34 @@ const ProductPage = () => {
             </section>
 
             {/* CATEGORY BAR */}
-            <div className="relative w-full max-w-6xl mx-auto px-4 md:px-20 py-4 flex items-center">
-                {/* Left Arrow */}
+            <div className="relative w-full max-w-6xl mx-auto 
+                px-3 sm:px-6 md:px-20 
+                py-3 md:py-4 
+                flex items-center">
+
                 {canScrollLeft && (
                     <button
                         onClick={() => scroll("left")}
-                        className="absolute left-0 top-1/2 -translate-y-1/2 z-20 p-2 bg-white shadow-md rounded-full hover:shadow-lg transition"
+                        className="hidden md:flex absolute left-0 top-1/2 -translate-y-1/2 
+               z-20 p-2 bg-white shadow-md rounded-full 
+               hover:shadow-lg transition items-center justify-center"
                     >
                         <span className="text-xl">&#8592;</span>
                     </button>
                 )}
 
+
                 {/* Scrollable Categories */}
                 <div
                     ref={scrollRef}
-                    className="flex items-center overflow-x-auto scroll-smooth no-scrollbar space-x-3 px-4 py-2 bg-white/80 backdrop-blur-md rounded-full shadow-md"
+                    className="flex items-center 
+               overflow-x-auto scroll-smooth no-scrollbar 
+               space-x-2 sm:space-x-3 md:space-x-4 
+               px-3 sm:px-4 md:px-6 
+               py-1.5 sm:py-2 
+               bg-white/80 backdrop-blur-md 
+               rounded-full shadow-md 
+               w-full"
                 >
                     {categories.map((cat, index) => {
                         const isActive = activeCategory === cat;
@@ -118,12 +131,21 @@ const ProductPage = () => {
                             <button
                                 key={index}
                                 onClick={() => setActiveCategory(cat)}
-                                className={`relative px-6 py-2 text-[11px] uppercase tracking-[0.15em] font-sans rounded-full transition-all ${isActive
-                                    ? "text-white bg-[#1A1A1A] shadow-lg"
-                                    : "text-gray-600 hover:text-black bg-white/30 hover:bg-white/50"
+                                className={`relative 
+            px-4 sm:px-5 md:px-6 
+            py-1.5 sm:py-2 
+            text-[9px] sm:text-[10px] md:text-[11px] 
+            uppercase tracking-[0.15em] 
+            font-sans rounded-full 
+            whitespace-nowrap
+            transition-all 
+            ${isActive
+                                        ? "text-white bg-[#1A1A1A] shadow-lg"
+                                        : "text-gray-600 hover:text-black bg-white/30 hover:bg-white/50"
                                     }`}
                             >
                                 <span className="relative z-10">{cat}</span>
+
                                 {isActive && (
                                     <motion.div
                                         layoutId="activePill"
@@ -140,12 +162,16 @@ const ProductPage = () => {
                 {canScrollRight && (
                     <button
                         onClick={() => scroll("right")}
-                        className="absolute right-0 top-1/2 -translate-y-1/2 z-20 p-2 bg-white shadow-md rounded-full hover:shadow-lg transition"
+                        className="hidden md:flex absolute right-0 top-1/2 -translate-y-1/2 
+               z-20 p-2 bg-white shadow-md rounded-full 
+               hover:shadow-lg transition items-center justify-center"
                     >
                         <span className="text-xl">&#8594;</span>
                     </button>
                 )}
+
             </div>
+
 
 
             {/* PRODUCT GRID */}

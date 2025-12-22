@@ -122,7 +122,7 @@ import { Star } from 'lucide-react';
 
 const Home = () => {
   return (
-    <section className="bg-white relative overflow-hidden px-4">
+    <section className="bg-white relative overflow-hidden ">
       <div className="pl-24 pr-24 relative w-full h-screen py-12 flex flex-col md:flex-row items-center justify-between">
 
         {/* Text Area */}

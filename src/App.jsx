@@ -31,6 +31,7 @@ import Home from "./pages/Home";
 import Admin from "./pages/Admin";
 import CuratedWorlds from "./pages/CuratedWorlds";
 import ProductSlider from "./pages/ProductSlider";
+import ProductCollection from "./pages/ProductCollection";
 import Footer from "./components/Footer";
 import Product from "./pages/Product";
 import Contact from "./pages/ContactPage";
@@ -62,6 +63,7 @@ export default function App() {
               <Home products={products} />
               <CuratedWorlds />
               <ProductSlider products={products} />
+              <ProductCollection products={products} />
             </>
           }
         />
