@@ -24,20 +24,20 @@
 
 // export default App;
 
-
 import { useEffect, useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Navbar from './pages/Navbar'; 
+import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import Admin from "./pages/Admin";
 import CuratedWorlds from "./pages/CuratedWorlds";
 import ProductSlider from "./pages/ProductSlider";
-import Footer from "./pages/Footer";
+import Footer from "./components/Footer";
+import Product from "./pages/Product";
+import Contact from "./pages/ContactPage";
+import AboutUs from "./pages/About";
 
-// Mock dataLoader - replace with your actual API/Firebase call
 const dataLoader = async () => {
-  // return fetch('/api/products').then(res => res.json());
-  return []; 
+  return [];
 };
 
 export default function App() {
@@ -52,25 +52,32 @@ export default function App() {
   return (
     <BrowserRouter>
       <Navbar />
-      
+
       <Routes>
-        {/* Main Landing Page Route */}
-        <Route 
-          path="/" 
+        {/* Home / Landing Page */}
+        <Route
+          path="/"
           element={
             <>
               <Home products={products} />
               <CuratedWorlds />
               <ProductSlider products={products} />
             </>
-          } 
+          }
         />
 
-        {/* Admin Route - Isolated from landing page content */}
+        {/* Admin */}
         <Route
           path="/ankur-admin-9482"
           element={<Admin products={products} setProducts={setProducts} />}
         />
+
+        {/* Contact Page */}
+        <Route path="/contact" element={<Contact />} />
+
+        {/* Product Page */}
+        <Route path="/product" element={<Product />} />
+        <Route path="/about" element={<AboutUs />} />
       </Routes>
 
       <Footer />

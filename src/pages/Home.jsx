@@ -98,7 +98,7 @@
 
 
 //       {/* --- CATEGORY TABS ---
-    
+
 
 //         {/* --- GRID --- */}
 
@@ -122,29 +122,35 @@ import { Star } from 'lucide-react';
 
 const Home = () => {
   return (
-    <section className="bg-white relative overflow-hidden">
+    <section className="bg-white relative overflow-hidden px-4">
       <div className="pl-24 pr-24 relative w-full h-screen py-12 flex flex-col md:flex-row items-center justify-between">
-        
+
         {/* Text Area */}
         <div className="max-w-xl animate-fade-in z-10">
           <h1 className="text-[82px] font-serif leading-[0.95] text-[#33302E] mb-6">
             THE ART OF <br />
-            <span className="italic text-[#B59461] font-normal tracking-tight">GIVING.</span>
+            <span className="italic text-[#B59461] font-normal tracking-tight">
+              GIVING.
+            </span>
           </h1>
-          <p className="text-[#7A746E] text-xl font-light mb-10 tracking-wide">
-            Curated elegance for every occasion
+          <p className="text-[#7A746E] text-xl font-light mb-6 tracking-wide">
+            Curated elegance for every occasion — thoughtful gifts, timeless charm, and moments that matter.
+          </p>
+          <p className="text-[#7A746E] text-lg font-light mb-10 tracking-wide">
+            Explore a collection designed to make every celebration unforgettable and every gesture meaningful.
           </p>
           <button className="px-12 py-4 bg-[#C5A371] text-white rounded-full text-xs font-bold tracking-[0.2em] uppercase hover:bg-[#B59461] transition-all transform hover:scale-105 shadow-xl shadow-[#C5A371]/30">
             Shop Now
           </button>
         </div>
 
+
         {/* The Curved Image Mask Area */}
         <div className="relative mt-8 md:mt-0 group">
           <div className="w-[700px] h-[550px] bg-[#EAE7DE] rounded-tl-[280px] overflow-hidden shadow-2xl shadow-black/5 relative">
-            <img 
+            <img
               src="https://images.unsplash.com/photo-1513201099705-a9746e1e201f?w=800"
-              alt="Gift Box" 
+              alt="Gift Box"
               className="w-full h-full object-cover opacity-95 transition-transform duration-700 group-hover:-translate-y-4 group-hover:scale-110"
             />
             {/* Subtle Sparkle/Light effect */}
@@ -162,7 +168,7 @@ const Home = () => {
             </div>
           </div>
 
-          
+
         </div>
 
       </div>

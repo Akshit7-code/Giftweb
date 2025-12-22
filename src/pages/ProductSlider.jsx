@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 
 const products = [
   { name: "Leather Pen Set", description: "Premium handcrafted leather pen set with an elegant finish.", originalPrice: "₹1500", price: "₹1200", img: "https://images.unsplash.com/photo-1607344645866-009c320b63e0?w=800", whatsappLink: "https://wa.me/919999900000" },
@@ -16,49 +16,76 @@ const WhatsAppIcon = () => (
 
 const ProductCards = () => {
   const visibleCount = 4;
+  // Use three copies for seamless infinite looping
   const extendedProducts = [...products, ...products, ...products];
+  
+  // Start at the beginning of the second set
   const [currentIndex, setCurrentIndex] = useState(products.length);
   const [isTransitioning, setIsTransitioning] = useState(true);
 
-  useEffect(() => {
-    if (currentIndex === 0 || currentIndex === extendedProducts.length - visibleCount) {
-      const timer = setTimeout(() => {
-        setIsTransitioning(false);
-        setCurrentIndex(products.length);
-      }, 500);
-      return () => clearTimeout(timer);
+  // Handle the instant "jump" when hitting the boundaries
+  const handleTransitionEnd = () => {
+    if (currentIndex >= products.length * 2) {
+      setIsTransitioning(false);
+      setCurrentIndex(currentIndex - products.length);
+    } else if (currentIndex < products.length) {
+      setIsTransitioning(false);
+      setCurrentIndex(currentIndex + products.length);
     }
-  }, [currentIndex, extendedProducts.length]);
+  };
 
+  // Re-enable transitions after the instant jump
   useEffect(() => {
     if (!isTransitioning) {
-      const timer = setTimeout(() => setIsTransitioning(true), 50);
-      return () => clearTimeout(timer);
+      // Smallest possible delay to allow the state to update before re-enabling animation
+      const timeout = setTimeout(() => setIsTransitioning(true), 10);
+      return () => clearTimeout(timeout);
     }
   }, [isTransitioning]);
 
-  const nextSlide = () => setCurrentIndex((prev) => prev + 1);
-  const prevSlide = () => setCurrentIndex((prev) => prev - 1);
+  const nextSlide = () => {
+    if (isTransitioning) setCurrentIndex((prev) => prev + 1);
+  };
+
+  const prevSlide = () => {
+    if (isTransitioning) setCurrentIndex((prev) => prev - 1);
+  };
 
   return (
-    <div className="max-w-[1530px] mx-auto bg-white py-16 overflow-hidden">
+    <div className="max-w-[1630px] mx-auto bg-white py-24 overflow-hidden px-8">
       <div className="max-w-[1800px] mx-auto px-6">
-        <h2 className="text-[38px] font-serif text-[#1A1A1A] mb-14 px-14 text-center md:text-left tracking-tight">
-          Trending Now
-        </h2>
+        
+        {/* --- HEADER --- */}
+        <div className="mb-16 px-14 flex flex-col items-center md:items-start">
+          <p className="text-[#B59461] text-[10px] uppercase tracking-[0.5em] font-bold mb-3 flex items-center gap-3">
+            <span className="w-8 h-[1px] bg-[#B59461]"></span>
+            Most Coveted Pieces
+          </p>
+          <h2 className="text-[48px] font-serif text-[#1A1A1A] tracking-tighter leading-none">
+            Trending <span className="italic font-normal">Now</span>
+          </h2>
+        </div>
 
         <div className="relative px-10">
-          <button onClick={prevSlide} className="absolute left-0 top-[40%] -translate-y-1/2 z-10 bg-white border border-gray-100 p-3 rounded-full shadow-sm hover:shadow-md transition-all text-[#333]">
+          {/* Navigation Buttons */}
+          <button 
+            onClick={prevSlide} 
+            className="absolute left-0 top-[40%] -translate-y-1/2 z-20 bg-white border border-gray-100 p-4 rounded-full shadow-sm hover:shadow-md hover:scale-110 transition-all text-[#333]"
+          >
             &#8592;
           </button>
-          <button onClick={nextSlide} className="absolute right-0 top-[40%] -translate-y-1/2 z-10 bg-white border border-gray-100 p-3 rounded-full shadow-sm hover:shadow-md transition-all text-[#333]">
+          <button 
+            onClick={nextSlide} 
+            className="absolute right-0 top-[40%] -translate-y-1/2 z-20 bg-white border border-gray-100 p-4 rounded-full shadow-sm hover:shadow-md hover:scale-110 transition-all text-[#333]"
+          >
             &#8594;
           </button>
 
           <div className="overflow-hidden">
             <div
-              className={`flex transition-transform ${isTransitioning ? "duration-500 ease-in-out" : "duration-0"}`}
+              className={`flex ${isTransitioning ? "transition-transform duration-500 ease-in-out" : "transition-none"}`}
               style={{ transform: `translateX(-${currentIndex * (100 / visibleCount)}%)` }}
+              onTransitionEnd={handleTransitionEnd}
             >
               {extendedProducts.map((product, index) => (
                 <div 
@@ -66,41 +93,39 @@ const ProductCards = () => {
                   className="px-3 flex-shrink-0" 
                   style={{ width: `${100 / visibleCount}%` }}
                 >
-                  <div className="group bg-[#FCFCFA] rounded-xl border border-[#F0F0E8] flex flex-col h-full transition-all duration-300 overflow-hidden hover:shadow-lg">
+                  <div className="group bg-[#FCFCFA] rounded-xl border border-[#F0F0E8] flex flex-col h-full transition-all duration-300 overflow-hidden hover:shadow-xl">
                     
                     {/* Image Section */}
-                    <div className="h-52 w-full overflow-hidden bg-gray-100">
+                    <div className="h-64 w-full overflow-hidden bg-gray-100 relative">
                       <img 
                         src={product.img} 
                         alt={product.name} 
-                        className="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:-translate-y-4 group-hover:scale-110" 
+                        className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110" 
                       />
+                      <div className="absolute inset-0 bg-black/5 group-hover:bg-transparent transition-colors duration-500"></div>
                     </div>
 
                     {/* Content Section */}
-                    <div className="p-5 flex flex-col flex-grow bg-white">
-                      <h3 className="text-lg font-serif text-[#1A1A1A] font-bold mb-1 line-clamp-1 italic">
+                    <div className="p-6 flex flex-col flex-grow bg-white">
+                      <h3 className="text-xl font-serif text-[#1A1A1A] mb-2 line-clamp-1 italic font-bold">
                         {product.name}
                       </h3>
                       
-                      <p className="text-[#666] text-xs mb-4 line-clamp-2 min-h-[32px] italic leading-relaxed">
+                      <p className="text-[#666] text-[13px] mb-6 line-clamp-2 min-h-[40px] italic leading-relaxed opacity-80">
                         {product.description}
                       </p>
                       
-                      <div className="mt-auto flex items-end justify-between">
-                        <div>
-                          <div className="flex flex-col mb-1">
-                            <span className="text-gray-400 line-through text-[10px]">{product.originalPrice}</span>
-                            <span className="text-[#B59461] font-bold text-xl leading-none">{product.price}</span>
-                          </div>
+                      <div className="mt-auto flex items-center justify-between">
+                        <div className="flex flex-col">
+                          <span className="text-gray-400 line-through text-[11px] mb-1">{product.originalPrice}</span>
+                          <span className="text-[#B59461] font-bold text-2xl leading-none">{product.price}</span>
                         </div>
                         
-                        {/* Circular WhatsApp Button */}
                         <a
                           href={product.whatsappLink}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="w-12 h-12 flex items-center justify-center bg-[#25D366] hover:bg-[#1ebe57] text-white rounded-full transition-transform duration-300 hover:scale-110 shadow-md"
+                          className="w-12 h-12 flex items-center justify-center bg-[#25D366] hover:bg-[#1ebe57] text-white rounded-full transition-all duration-300 hover:scale-110 shadow-lg"
                         >
                           <WhatsAppIcon />
                         </a>

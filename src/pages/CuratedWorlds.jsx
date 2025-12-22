@@ -21,7 +21,7 @@ const CuratedWorlds = () => {
 
   return (
     /* Changed bg to #F9F8F6 for a distinct yet luxury feel */
-    <section className="py-24 bg-[#F9F8F6] overflow-hidden">
+    <section className="py-24 bg-[#F9F8F6] overflow-hidden px-4">
       
       {/* Section Title - Padding matched to Hero Section (pl-24 pr-24) */}
       <div className="max-w-[1800px] mx-auto mb-16 pl-24 pr-24 text-center md:text-left">
