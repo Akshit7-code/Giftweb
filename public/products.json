@@ -1,0 +1,116 @@
+{
+  "products": [
+    {
+      "id": "LP001",
+      "name": "Elegant Ladies Purse",
+      "category": "Ladies Purse",
+      "shortDescription": "Stylish ladies purse with premium finish.",
+      "price": 899,
+      "image": "https://images.unsplash.com/photo-1600180758895-660d45c5282b?auto=format&fit=crop&w=500&q=60"
+    },
+    {
+      "id": "CG001",
+      "name": "Birthday Combo Gift",
+      "category": "Combo Gifts",
+      "shortDescription": "Combo gift with chocolate, card and soft toy.",
+      "price": 1099,
+      "image": "https://images.unsplash.com/photo-1610388032220-5f2e1c05f78a?auto=format&fit=crop&w=500&q=60"
+    },
+    {
+      "id": "PG001",
+      "name": "Customized Photo Frame",
+      "category": "Photo Gifts",
+      "shortDescription": "Personalized photo frame for special memories.",
+      "price": 699,
+      "image": "https://images.unsplash.com/photo-1606312614385-0b163efb67ee?auto=format&fit=crop&w=500&q=60"
+    },
+    {
+      "id": "CP001",
+      "name": "Name Engraved Pen",
+      "category": "Customized Pen",
+      "shortDescription": "Customized pen with laser engraved name.",
+      "price": 299,
+      "image": "https://images.unsplash.com/photo-1612831455542-6e3a46b1ed7e?auto=format&fit=crop&w=500&q=60"
+    },
+    {
+      "id": "PS001",
+      "name": "Wooden Pen Stand",
+      "category": "Pen Stand",
+      "shortDescription": "Premium wooden pen stand for office desk.",
+      "price": 399,
+      "image": "https://images.unsplash.com/photo-1598300057863-10da87b6895e?auto=format&fit=crop&w=500&q=60"
+    },
+    {
+      "id": "BT001",
+      "name": "Steel Bottle & Tiffin Set",
+      "category": "Bottles & Tiffins",
+      "shortDescription": "Durable steel bottle with matching tiffin.",
+      "price": 999,
+      "image": "https://images.unsplash.com/photo-1580894894516-5d63a53985c5?auto=format&fit=crop&w=500&q=60"
+    },
+    {
+      "id": "LM001",
+      "name": "Laser Engraved Key Holder",
+      "category": "Laser Marking Products",
+      "shortDescription": "Laser marked key holder with custom text.",
+      "price": 349,
+      "image": "https://images.unsplash.com/photo-1611599537550-35f3c1e53bdb?auto=format&fit=crop&w=500&q=60"
+    },
+    {
+      "id": "LED001",
+      "name": "LED Photo Lamp",
+      "category": "Led Products",
+      "shortDescription": "Customized LED lamp with photo engraving.",
+      "price": 1299,
+      "image": "https://images.unsplash.com/photo-1600566752189-ec735fef6de4?auto=format&fit=crop&w=500&q=60"
+    },
+    {
+      "id": "PR001",
+      "name": "Luxury Corporate Gift Set",
+      "category": "Premium Gifts",
+      "shortDescription": "Premium gift set with elegant packaging.",
+      "price": 1999,
+      "image": "https://images.unsplash.com/photo-1612832020470-9dc6b8451e20?auto=format&fit=crop&w=500&q=60"
+    },
+    {
+      "id": "NC001",
+      "name": "Classic Ready Gift",
+      "category": "Non Customized",
+      "shortDescription": "Non-customized gift item ready for delivery.",
+      "price": 499,
+      "image": "https://images.unsplash.com/photo-1597440750760-3a5d8de37d7f?auto=format&fit=crop&w=500&q=60"
+    },
+    {
+      "id": "KC001",
+      "name": "Metal Keychain",
+      "category": "Keychain",
+      "shortDescription": "Stylish metal keychain for everyday use.",
+      "price": 199,
+      "image": "https://images.unsplash.com/photo-1612831455481-1c295dc2f5d1?auto=format&fit=crop&w=500&q=60"
+    },
+    {
+      "id": "CM001",
+      "name": "Printed Coffee Mug",
+      "category": "Coffee Mug",
+      "shortDescription": "High quality printed coffee mug.",
+      "price": 349,
+      "image": "https://images.unsplash.com/photo-1603415526960-f82c3df4b182?auto=format&fit=crop&w=500&q=60"
+    },
+    {
+      "id": "TS001",
+      "name": "Customized Printed T-Shirt",
+      "category": "T-Shirt Print",
+      "shortDescription": "Custom text or image printed t-shirt.",
+      "price": 599,
+      "image": "https://images.unsplash.com/photo-1593032465171-64a3f0521123?auto=format&fit=crop&w=500&q=60"
+    },
+    {
+      "id": "MI001",
+      "name": "Special Gift Item",
+      "category": "More Items",
+      "shortDescription": "Unique gift item for special occasions.",
+      "price": 799,
+      "image": "https://images.unsplash.com/photo-1612831455463-2d5e7e3b3b91?auto=format&fit=crop&w=500&q=60"
+    }
+  ]
+}
