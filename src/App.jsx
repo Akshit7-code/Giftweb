@@ -75,11 +75,11 @@ export default function App() {
         />
 
         {/* Contact Page */}
-        <Route path="/contact" element={<Contact />} />
+        <Route path="/Contact" element={<Contact />} />
 
         {/* Product Page */}
-        <Route path="/product" element={<Product />} />
-        <Route path="/about" element={<AboutUs />} />
+        <Route path="/Product" element={<Product />} />
+        <Route path="/About" element={<AboutUs />} />
       </Routes>
 
       <Footer />
