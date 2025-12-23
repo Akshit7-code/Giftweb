@@ -5,23 +5,23 @@ const ContactPage = () => {
   return (
     // mt-20 accounts for your 80px sticky header
     <main className="mt-20 min-h-[calc(100vh-80px)] bg-white text-[#1A1A1A] font-sans">
-      
+
       {/* Subtle Top Divider */}
       <div className="w-full h-[1px] bg-[#E5E1D3]" />
 
       <div className="max-w-6xl mx-auto px-6 py-16 md:py-24">
         <div className="grid lg:grid-cols-12 gap-16 items-start">
-          
+
           {/* Section 1: Branding & Info (5 Columns) */}
           <div className="lg:col-span-5 space-y-10">
             <div className="space-y-6">
-                 <p className="text-[#B59461] text-[10px] uppercase tracking-[0.5em] font-bold mb-3 flex items-center gap-3">
-            <span className="w-8 h-[1px] bg-[#B59461]"></span>
-            Connect with us
-          </p>
+              <p className="text-[#B59461] text-[10px] uppercase tracking-[0.5em] font-bold mb-3 flex items-center gap-3">
+                <span className="w-8 h-[1px] bg-[#B59461]"></span>
+                Connect with us
+              </p>
               {/* <h2 className="text-[#C5A358] uppercase tracking-[0.3em] text-xs font-bold">Connect with us</h2> */}
               <h1 className="text-5xl md:text-6xl font-serif leading-tight text-black">
-                Personalized <br /> 
+                Personalized <br />
                 <span className="text-[#C5A358]">Service.</span>
               </h1>
               <p className="text-gray-500 font-light leading-relaxed max-w-sm text-lg">
@@ -56,13 +56,13 @@ const ContactPage = () => {
           <div className="lg:col-span-7">
             <div className="bg-[#F9F9F9] border border-[#E5E1D3] p-8 md:p-12 rounded-3xl shadow-sm">
               <form className="space-y-10" onSubmit={(e) => e.preventDefault()}>
-                
+
                 {/* Name Row */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
                   <div className="flex flex-col gap-2 group">
                     <label className="text-[10px] uppercase tracking-[0.2em] text-gray-700 font-bold group-focus-within:text-[#C5A358] transition-colors">First Name</label>
-                    <input 
-                      type="text" 
+                    <input
+                      type="text"
                       placeholder="Jane"
                       className="bg-transparent border-b border-[#ababab] pb-3 outline-none focus:border-[#C5A358] transition-all font-light placeholder:text-gray-400 text-lg"
                     />
@@ -70,8 +70,8 @@ const ContactPage = () => {
 
                   <div className="flex flex-col gap-2 group">
                     <label className="text-[10px] uppercase tracking-[0.2em] text-gray-700 font-bold group-focus-within:text-[#C5A358] transition-colors">Last Name</label>
-                    <input 
-                      type="text" 
+                    <input
+                      type="text"
                       placeholder="Doe"
                       className="bg-transparent border-b border-[#ababab] pb-3 outline-none focus:border-[#C5A358] transition-all font-light placeholder:text-gray-400 text-lg"
                     />
@@ -81,8 +81,8 @@ const ContactPage = () => {
                 {/* Email Field */}
                 <div className="flex flex-col gap-2 group">
                   <label className="text-[10px] uppercase tracking-[0.2em] text-gray-700 font-bold group-focus-within:text-[#C5A358] transition-colors">Email Address</label>
-                  <input 
-                    type="email" 
+                  <input
+                    type="email"
                     placeholder="jane@example.com"
                     className="bg-transparent border-b border-[#ababab] pb-3 outline-none focus:border-[#C5A358] transition-all font-light placeholder:text-gray-400 text-lg"
                   />
@@ -91,8 +91,8 @@ const ContactPage = () => {
                 {/* Message Field */}
                 <div className="flex flex-col gap-2 group">
                   <label className="text-[10px] uppercase tracking-[0.2em] text-gray-700 font-bold group-focus-within:text-[#C5A358] transition-colors">Your Message</label>
-                  <textarea 
-                    rows="4" 
+                  <textarea
+                    rows="4"
                     placeholder="How can our concierge assist you today?"
                     className="bg-transparent border-b border-[#ababab] pb-3 outline-none focus:border-[#C5A358] transition-all font-light resize-none placeholder:text-gray-400 text-lg"
                   ></textarea>

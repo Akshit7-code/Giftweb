@@ -3,6 +3,7 @@
 
 import React, { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -40,10 +41,10 @@ const Navbar = () => {
 
           {/* Desktop Menu (UNCHANGED DESIGN) */}
           <div className="hidden lg:flex items-center space-x-10 text-[13px] uppercase tracking-[0.15em] text-[#5A544E] font-medium">
-            <a href="/" className="hover:text-[#B59461] transition">Home</a>
-            <a href="/about" className="hover:text-[#B59461] transition">About</a>
-            <a href="/product" className="hover:text-[#B59461] transition">Products</a>
-            <a href="/contact" className="hover:text-[#B59461] transition">Contact</a>
+            <Link href="/" className="hover:text-[#B59461] transition">Home</Link>
+            <Link href="/about" className="hover:text-[#B59461] transition">About</Link>
+            <Link href="/product" className="hover:text-[#B59461] transition">Products</Link>
+            <Link href="/contact" className="hover:text-[#B59461] transition">Contact</Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -59,10 +60,10 @@ const Navbar = () => {
         {menuOpen && (
           <div className="lg:hidden bg-white/90 backdrop-blur-md border-t border-gray-100">
             <div className="flex flex-col items-center py-6 space-y-6 text-[12px] uppercase tracking-[0.2em] font-medium text-[#5A544E]">
-              <a onClick={() => setMenuOpen(false)} href="/" className="hover:text-[#B59461]">Home</a>
-              <a onClick={() => setMenuOpen(false)} href="/About" className="hover:text-[#B59461]">About</a>
-              <a onClick={() => setMenuOpen(false)} href="/Product" className="hover:text-[#B59461]">Products</a>
-              <a onClick={() => setMenuOpen(false)} href="/Contact" className="hover:text-[#B59461]">Contact</a>
+              <Link onClick={() => setMenuOpen(false)} href="/" className="hover:text-[#B59461]">Home</Link>
+              <Link onClick={() => setMenuOpen(false)} href="/about" className="hover:text-[#B59461]">About</Link>
+              <Link onClick={() => setMenuOpen(false)} href="/product" className="hover:text-[#B59461]">Products</Link>
+              <Link onClick={() => setMenuOpen(false)} href="/contact" className="hover:text-[#B59461]">Contact</Link>
             </div>
           </div>
         )}
