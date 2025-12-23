@@ -24,10 +24,18 @@ const CuratedWorlds = () => {
 
       {/* ================= SECTION HEADER ================= */}
       <div className="max-w-[1800px] mx-auto mb-14 md:mb-16 px-4 sm:px-8 lg:px-24 text-center md:text-left">
-        <p className="text-[#B59461] text-[9px] md:text-[10px] uppercase tracking-[0.4em] md:tracking-[0.5em] font-bold mb-3 flex items-center gap-3">
-            <span className="w-6 md:w-8 h-[1px] bg-[#B59461]"></span>
-             Handpicked Excellence
-          </p>
+        <p className="
+  text-[#B59461] text-[9px] md:text-[10px] uppercase 
+  tracking-[0.4em] md:tracking-[0.5em] 
+  font-bold mb-3
+  flex items-center gap-3
+  justify-center md:justify-start
+  text-center md:text-left
+">
+  <span className="w-6 md:w-8 h-[1px] bg-[#B59461]"></span>
+  Handpicked Excellence
+</p>
+
         <h2 className="text-3xl sm:text-4xl md:text-[48px] font-serif text-[#33302E] leading-tight tracking-tight">
           Curated Worlds
         </h2>
