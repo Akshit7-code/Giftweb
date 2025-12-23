@@ -61,9 +61,9 @@ const Navbar = () => {
           <div className="lg:hidden bg-white/90 backdrop-blur-md border-t border-gray-100">
             <div className="flex flex-col items-center py-6 space-y-6 text-[12px] uppercase tracking-[0.2em] font-medium text-[#5A544E]">
               <Link onClick={() => setMenuOpen(false)} href="/" className="hover:text-[#B59461]">Home</Link>
-              <Link onClick={() => setMenuOpen(false)} href="/About" className="hover:text-[#B59461]">About</Link>
-              <Link onClick={() => setMenuOpen(false)} href="/Product" className="hover:text-[#B59461]">Products</Link>
-              <Link onClick={() => setMenuOpen(false)} href="/Contact" className="hover:text-[#B59461]">Contact</Link>
+              <Link onClick={() => setMenuOpen(false)} href="/about" className="hover:text-[#B59461]">About</Link>
+              <Link onClick={() => setMenuOpen(false)} href="/product" className="hover:text-[#B59461]">Products</Link>
+              <Link onClick={() => setMenuOpen(false)} href="/contact" className="hover:text-[#B59461]">Contact</Link>
             </div>
           </div>
         )}
