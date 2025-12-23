@@ -34,9 +34,9 @@ const Navbar = () => {
         <div className="flex justify-between items-center px-6 md:px-12 lg:px-28 py-5">
           {/* Logo */}
           <div className="text-3xl font-serif tracking-tight text-[#33302E]">
-            <a href="/">
+            <Link href="/">
               Gift <span className="text-[#B59461]">4</span> U
-            </a>
+            </Link>
           </div>
 
           {/* Desktop Menu (UNCHANGED DESIGN) */}
