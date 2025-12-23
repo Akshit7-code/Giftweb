@@ -41,9 +41,9 @@ const Navbar = () => {
           {/* Desktop Menu (UNCHANGED DESIGN) */}
           <div className="hidden lg:flex items-center space-x-10 text-[13px] uppercase tracking-[0.15em] text-[#5A544E] font-medium">
             <a href="/" className="hover:text-[#B59461] transition">Home</a>
-            <a href="/About" className="hover:text-[#B59461] transition">About</a>
-            <a href="/Product" className="hover:text-[#B59461] transition">Products</a>
-            <a href="/Contact" className="hover:text-[#B59461] transition">Contact</a>
+            <a href="/about" className="hover:text-[#B59461] transition">About</a>
+            <a href="/product" className="hover:text-[#B59461] transition">Products</a>
+            <a href="/contact" className="hover:text-[#B59461] transition">Contact</a>
           </div>
 
           {/* Mobile Menu Button */}
