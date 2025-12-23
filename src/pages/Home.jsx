@@ -115,62 +115,94 @@
 // export default Home;
 
 
-
 import React from 'react';
-import { motion } from 'framer-motion'; // Assuming you use Framer Motion for the bounce
 import { Star } from 'lucide-react';
 
 const Home = () => {
   return (
-    <section className="bg-white relative overflow-hidden ">
-      <div className="pl-24 pr-24 relative w-full h-screen py-12 flex flex-col md:flex-row items-center justify-between">
+    <section className="bg-white relative overflow-hidden px-4">
+      <div className="
+        relative w-full min-h-screen py-28
+        flex flex-col md:flex-row items-center justify-between
+        px-4 sm:px-8 lg:px-24
+      ">
 
         {/* Text Area */}
-        <div className="max-w-xl animate-fade-in z-10">
-          <h1 className="text-[82px] font-serif leading-[0.95] text-[#33302E] mb-6">
+        <div className="
+          max-w-xl z-10
+          text-center md:text-left
+        ">
+          <h1 className="text-4xl sm:text-5xl md:text-7xl font-serif leading-[0.95] text-[#33302E] mb-6">
             THE ART OF <br />
-            <span className="italic text-[#B59461] font-normal tracking-tight">
+            <span className="italic text-[#B59461] font-normal tracking-tight text-4xl sm:text-5xl md:text-7xl">
               GIVING.
             </span>
           </h1>
-          <p className="text-[#7A746E] text-xl font-light mb-6 tracking-wide">
+
+          <p className="text-[#7A746E] text-base sm:text-lg md:text-xl font-light mb-6 tracking-wide">
             Curated elegance for every occasion — thoughtful gifts, timeless charm, and moments that matter.
           </p>
-          <p className="text-[#7A746E] text-lg font-light mb-10 tracking-wide">
+
+          <p className="text-[#7A746E] text-sm sm:text-base md:text-lg font-light mb-10 tracking-wide">
             Explore a collection designed to make every celebration unforgettable and every gesture meaningful.
           </p>
-          <button className="px-12 py-4 bg-[#C5A371] text-white rounded-full text-xs font-bold tracking-[0.2em] uppercase hover:bg-[#B59461] transition-all transform hover:scale-105 shadow-xl shadow-[#C5A371]/30">
+
+          <button className="
+            px-10 sm:px-12 py-4
+            bg-[#C5A371] text-white rounded-full
+            text-xs font-bold tracking-[0.2em] uppercase
+            hover:bg-[#B59461] transition-all
+            transform hover:scale-105
+            shadow-xl shadow-[#C5A371]/30
+          ">
             Shop Now
           </button>
         </div>
 
-
-        {/* The Curved Image Mask Area */}
-        <div className="relative mt-8 md:mt-0 group">
-          <div className="w-[700px] h-[550px] bg-[#EAE7DE] rounded-tl-[280px] overflow-hidden shadow-2xl shadow-black/5 relative">
+        {/* Image Area */}
+        <div className="relative mt-16 md:mt-0 group">
+          <div className="
+            bg-[#EAE7DE] overflow-hidden relative
+            shadow-2xl shadow-black/5
+            w-[90vw] sm:w-[500px] md:w-[700px]
+            h-[350px] sm:h-[450px] md:h-[550px]
+            rounded-tl-[180px] sm:rounded-tl-[220px] md:rounded-tl-[280px]
+          ">
             <img
               src="https://images.unsplash.com/photo-1513201099705-a9746e1e201f?w=800"
               alt="Gift Box"
-              className="w-full h-full object-cover opacity-95 transition-transform duration-700 group-hover:-translate-y-4 group-hover:scale-110"
+              className="
+                w-full h-full object-cover opacity-95
+                transition-transform duration-700
+                group-hover:-translate-y-4 group-hover:scale-110
+              "
             />
-            {/* Subtle Sparkle/Light effect */}
-            <div className="absolute inset-0 bg-gradient-to-tr from-white/10 to-transparent pointer-events-none"></div>
+            <div className="absolute inset-0 bg-gradient-to-tr from-white/10 to-transparent pointer-events-none" />
           </div>
 
-          {/* Floating Rating Card - Positioned relative to the image */}
-          <div className="absolute -bottom-8 -left-12 bg-white p-6 rounded-3xl shadow-2xl border border-slate-50 flex items-center gap-4 ">
+          {/* Rating Card */}
+          <div className="
+            absolute
+            -bottom-6 md:-bottom-8
+            left-1/2 md:left-[-3rem]
+            -translate-x-1/2 md:translate-x-0
+            bg-white p-4 sm:p-6
+            rounded-3xl shadow-2xl
+            border border-slate-50
+            flex items-center gap-4
+          ">
             <div className="bg-green-100 p-3 rounded-2xl text-green-600">
               <Star size={24} fill="currentColor" />
             </div>
             <div>
               <p className="font-black text-slate-900 text-lg">4.7/5.0</p>
-              <p className="text-xs text-slate-500 font-medium tracking-wide">Customer Rating</p>
+              <p className="text-xs text-slate-500 font-medium tracking-wide">
+                Customer Rating
+              </p>
             </div>
           </div>
 
-
         </div>
-
       </div>
     </section>
   );

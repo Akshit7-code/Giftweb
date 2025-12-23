@@ -20,7 +20,7 @@ const ContactPage = () => {
             Connect with us
           </p>
               {/* <h2 className="text-[#C5A358] uppercase tracking-[0.3em] text-xs font-bold">Connect with us</h2> */}
-              <h1 className="text-5xl md:text-6xl font-serif italic leading-tight text-black">
+              <h1 className="text-5xl md:text-6xl font-serif leading-tight text-black">
                 Personalized <br /> 
                 <span className="text-[#C5A358]">Service.</span>
               </h1>
